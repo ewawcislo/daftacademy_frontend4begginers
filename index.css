@@ -1,0 +1,148 @@
+body {
+    background-color: #25072e
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans"; regular;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: #dbd8fb;
+    ;
+}
+
+ul { 
+    list-style: none; 
+}
+
+h1 {
+    margin: 0;
+}
+h2 {
+    margin: 0;
+    font-size: 15;
+    color: #ec008c;
+}
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ec008c;
+}
+.page-header {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.page-footer {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+
+.page-section__header {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1vw;
+    text-align: right;
+}
+.page-section__content {
+    box-sizing: border-box;
+    height: calc(100% - 2vw - 52px);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 1vw;
+    float: right;
+}
+
+.content-section {
+    min-height: 100vh;
+    padding-right: 50px;
+    max-width: 100%;
+}
+.band-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20vh;
+}
+
+.band-members__name {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.about-section__photo {
+    float: right;
+    width: 50vw;
+}
+
+.about-section__desc {
+    float: left;
+    width: 300px;
+    margin-top: 150px;
+    margin-left: 200px;
+}
+.concerts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 80vw;
+    margin-left: 200px;
+}
+
+.concerts__item {
+    flex-basis: 35%;
+}
+
+iframe {
+    float: right;
+    margin-top: 30px;
+    width: 60vw;
+    height: 70vh;
+    border-top: 3px solid #ec008c;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 90vw;
+    margin-left: 300px
+}
+
+.social-links__item img {
+    height: auto;
+    width: 30px;
+    
+}
+.contact-section {
+    margin-left: 300px;
+}
+
+.contact-section__image {
+    width: 40vw;
+}
+
+address {
+    float: right;
+    margin-right: 10vw;
+    margin-top: 200px;
+    font-style: normal;
+}
+
+.form__field {
+    margin: 10px 0;
+}
+
+.form__input {
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
