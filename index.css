@@ -1,148 +1,274 @@
+
+
 body {
-    background-color: #25072e
-    padding: 0;
-    margin: 0;
-    font-family: "Open Sans"; regular;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    color: #dbd8fb;
-    ;
+	background-image: url(./images/background.svg);
+	background-attachment: fixed;
+    background-position: top;
+    font-family: "open sans", monospace;
+	letter-spacing: 1.5 px;
 }
 
-ul { 
-    list-style: none; 
+header {
+	width: 300px;
+	height: 200px;
+	position: sticky;
+	top: 0px;
+	left: 0px;
+}
+
+footer {
+	width: 300px;
+	height: 200px;
+	position: sticky;
+	bottom: 0px;
+	left: 0px;
 }
 
 h1 {
-    margin: 0;
+	margin: 0;
 }
+
 h2 {
-    margin: 0;
-    font-size: 15;
-    color: #ec008c;
+	font-size: 28px;
+	font-weight: bold;
+	text-align: right;
+	text-transform: uppercase;
+	color: #EF008E;
+	line-height: 100px;
+	margin: 0;
 }
+
+h3 {
+	text-align: left;
+	color: #CCC8FF;
+	font-size: 15px;
+	text-transform: uppercase;
+	margin: 0;
+	margin-bottom: 10px;
+}
+.content-section__header {
+    text-align: right
+}
+	
 a {
-    text-decoration: none;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #EF008E;
+	opacity: 0.6;
 }
 
-a:hover {
-    color: #ec008c;
-}
-.page-header {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1;
+p {		
+	font-size: 13px;
+	color: #CCC8FF;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
-.page-footer {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1;
+li {
+	text-decoration: none;
+	list-style-type: none;
+	font-weight: bold;
 }
 
+section {
+	padding: 10px;
+	margin: 10px;
+	background: ./images/background.svg;
+}
 
-.page-section__header {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 1vw;
-    text-align: right;
+button {
+	background-color: #1e1029;
+	border: 0px;
+	color: #CCC8FF;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	height: 30px;
+    width: 100px;
 }
-.page-section__content {
-    box-sizing: border-box;
-    height: calc(100% - 2vw - 52px);
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    margin-top: 1vw;
-    float: right;
-}
+
 
 .content-section {
-    min-height: 100vh;
-    padding-right: 50px;
-    max-width: 100%;
+	min-height: 100vh;
+    height: auto;
+    margin-left: 300px;
+	padding: 0 10%;
 }
+
+/* MENU */
+
+.page-navigation{
+    font-family: "HELVETICA", monospace;
+	padding: 0px;
+	font-weight: bold;
+	font-size: 13px;
+	color: #EF008E;
+	letter-spacing: 5px;
+	line-height: 2;
+}
+
+.page-navigation a:hover {
+	opacity: 1.0;
+}
+.content-section__header screen-reader-only {
+    visibility: hidden
+}
+/* members */
+
 .band-members {
-    display: flex;
+	display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 20vh;
+    cursor: pointer;
 }
 
 .band-members__name {
     text-transform: uppercase;
-    font-weight: bold;
+    font-family: "helvetica", bold;
+    color: #dbd8fb
+    letter-spacing: 40px;
 }
 
-.about-section__photo {
-    float: right;
-    width: 50vw;
-}
-
-.about-section__desc {
-    float: left;
-    width: 300px;
-    margin-top: 150px;
-    margin-left: 200px;
-}
-.concerts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    max-width: 80vw;
-    margin-left: 200px;
-}
-
-.concerts__item {
-    flex-basis: 35%;
-}
-
-iframe {
-    float: right;
-    margin-top: 30px;
-    width: 60vw;
-    height: 70vh;
-    border-top: 3px solid #ec008c;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    max-width: 90vw;
-    margin-left: 300px
-}
-
-.social-links__item img {
-    height: auto;
-    width: 30px;
+.band-members__desc {
+        opacity: 0.1;
     
 }
-.contact-section {
-    margin-left: 300px;
+
+.band-members__image {
+	opacity: 0.5;
 }
 
-.contact-section__image {
-    width: 40vw;
+.band-members__image:hover {
+	opacity : 0.70;
+filter : alpha(opacity=70)
+}
+
+/* ABOUT */
+
+#about {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+#about img {
+	width: 800px; 
+	height: auto;
+	border-top: 3px solid #EF008E;
+}
+
+
+.about-section__desc {
+    background-color: #1e1029;
+	background: solid;
+    width: 300px;
+    height: auto;
+	border-bottom: 3px solid #EF008E;
+	padding: 50px;  
+}
+
+.about {
+	opacity: 0.5;
+}
+h2.screen-reader-only{
+    visibility: hidden
+}
+
+/* koncerty */
+
+#concerts div.box {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#concerts img {
+	width: 350px; 
+	height: auto;
+	border-bottom: 3px solid #EF008E;
+}
+
+#concerts div.concert-details {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+#concerts div.concert-box {
+	margin-bottom: 20px;
+}
+
+.concerts__date {
+	text-transform: uppercase;
+}
+
+.concerts__location  {
+	opacity: 0.5;
+}
+
+/* zdjecia */
+
+#photos img {
+	width: 250px; 
+	height: 150px;
+	margin-bottom: 20px;
+	border-top: 3px solid #EF008E;
+}
+
+#photos div.box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* linki social*/
+
+#social img {
+	width: 25px;
+	height: 25px;
+
+}
+
+#social ul {
+    position: fixed;
+	padding: 0px;
+}
+
+/* contact */
+
+#contact img {
+	width: 500px;
+	height: auto;
+}
+
+#contact div.box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 address {
-    float: right;
-    margin-right: 10vw;
-    margin-top: 200px;
-    font-style: normal;
+	font-style: normal;
+	font-size: 13px;
+	color: #CCC8FF;
+	opacity: 0.5;
+	margin-left: 20px;
 }
 
-.form__field {
-    margin: 10px 0;
+form {
+	font-size: 13px;
+	color: #CCC8FF;
+	opacity: 0.5;
+	margin-top: 20px;
 }
 
-.form__input {
-    border: 0px;
-    border-radius: 5px;
-    padding: 5px 15px;
-}
+input {
+	background-color: #1e1029;
+	border: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 30px;
+    width: 300px;
 
+}
