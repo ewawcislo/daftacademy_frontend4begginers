@@ -1,126 +1,154 @@
-
+* {
+    box-sizing: border-box;
+}
 
 body {
-	background-image: url(./images/background.svg);
-	background-attachment: fixed;
-    background-position: top;
-    font-family: "open sans", monospace;
-	letter-spacing: 1.5 px;
+    
+	background-image: url('./images/background.svg');
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-header {
-	width: 300px;
-	height: 200px;
-	position: sticky;
-	top: 0px;
-	left: 0px;
+h1, h2, h3 {
+    margin: 0;
 }
 
-footer {
-	width: 300px;
-	height: 200px;
-	position: sticky;
-	bottom: 0px;
-	left: 0px;
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-	margin: 0;
+.screen-reader-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
-h2 {
-	font-size: 28px;
-	font-weight: bold;
-	text-align: right;
-	text-transform: uppercase;
-	color: #EF008E;
-	line-height: 100px;
-	margin: 0;
+body {
+    color: rgba(204, 200, 255, 0.8);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: normal;
 }
 
-h3 {
-	text-align: left;
-	color: #CCC8FF;
-	font-size: 15px;
-	text-transform: uppercase;
-	margin: 0;
-	margin-bottom: 10px;
-}
-.content-section__header {
-    text-align: right
-}
-	
 a {
-	font-size: 13px;
-	font-weight: bold;
-	text-decoration: none;
-	color: #EF008E;
-	opacity: 0.6;
+    color: #EF008E;
+    text-decoration: none;
+}
+.button {
+    padding: 7px 15px;
+    border-radius: 3px;
+    background-color: rgba(204, 200, 255, 0.1);
+    border-color: rgba(204, 200, 255, 0.1);
+
+    color: rgba(204, 200, 255, 0.8);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    cursor: pointer;
 }
 
-p {		
-	font-size: 13px;
-	color: #CCC8FF;
-	margin-top: 0px;
-	margin-bottom: 0px;
+.form__field {
+    margin-bottom: 10px;
 }
 
-li {
-	text-decoration: none;
-	list-style-type: none;
-	font-weight: bold;
+.form__label {
+    display: block;
+    margin-bottom: 9px;
 }
 
-section {
-	padding: 10px;
-	margin: 10px;
-	background: ./images/background.svg;
+.form__input {
+    display: block;
+    height: 35px;
+    width: 300px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(219, 216, 251, 0.1);
+}
+.page-header {
+    position: fixed;
+    top: 50px;
+    left: 50px;
 }
 
-button {
-	background-color: #1e1029;
-	border: 0px;
-	color: #CCC8FF;
-	font-size: 12px;
-	font-weight: bold;
-	text-align: center;
-	height: 30px;
-    width: 100px;
+.page-footer {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+}
+.page-content {
+    margin-left: 220px;
+    padding: 0 10%;
+}
+.page-navigation__items {
+    padding-top: 15px;
 }
 
+.page-navitagion__item a {
+    color: rgba(239, 0, 142, 0.6);
+	line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 6.7px;
+}
+.social-links__item + .social-links__item {
+    margin-top: 15px;
+}
 
+.social-links__item img {
+    width: 20px;
+    height: 20px;
+}
 .content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 	min-height: 100vh;
+	max-width: 100vh;
+}
+
+.content-section__header {
+    margin-bottom: 60px;
+    color: #EF008E;
+    font-size: 2vw;
+    font-weight: bold;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+}
+
+.content-section__body {
+    min-height: 100vh;
     height: auto;
     margin-left: 300px;
 	padding: 0 10%;
 }
 
-/* MENU */
-
-.page-navigation{
-    font-family: "HELVETICA", monospace;
-	padding: 0px;
-	font-weight: bold;
-	font-size: 13px;
-	color: #EF008E;
-	letter-spacing: 5px;
-	line-height: 2;
+.content-section.home-section {
+    align-items: center;
 }
-
-.page-navigation a:hover {
-	opacity: 1.0;
+@media (max-width: 1024px) { 
+    .content-section {
+        min-height: initial;
+        margin: 0 20px 0 20px;
+    }
 }
-.content-section__header screen-reader-only {
-    visibility: hidden
-}
-/* members */
 
 .band-members {
-	display: flex;
-    justify-content: center;
-    cursor: pointer;
+position: relative;
+display: flex;
+flex-direction: row;
+
+min-height: 100vh;
 }
+
 
 .band-members__name {
     text-transform: uppercase;
@@ -130,145 +158,131 @@ button {
 }
 
 .band-members__desc {
-        opacity: 0.1;
+	margin: 40px 0 0 50px;
+    opacity: 0.1;
     
 }
-
-.band-members__image {
-	opacity: 0.5;
-}
-
-.band-members__image:hover {
-	opacity : 0.70;
-filter : alpha(opacity=70)
-}
-
-/* ABOUT */
-
-#about {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-start;
-}
-
-#about img {
-	width: 800px; 
-	height: auto;
-	border-top: 3px solid #EF008E;
-}
-
-
-.about-section__desc {
-    background-color: #1e1029;
-	background: solid;
-    width: 300px;
-    height: auto;
-	border-bottom: 3px solid #EF008E;
-	padding: 50px;  
-}
-
+@media screen and (max-width: 800px) {
+	.page-wrapper {
+	  flex-direction: column;
+	}
 .about {
-	opacity: 0.5;
-}
-h2.screen-reader-only{
-    visibility: hidden
-}
-
-/* koncerty */
-
-#concerts div.box {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+    position: relative;
+    margin-left: 290px;
+    margin-bottom: 115px;
 }
 
-#concerts img {
-	width: 350px; 
-	height: auto;
-	border-bottom: 3px solid #EF008E;
+.about__image {
+    max-width: 100%;
+    border-top: 3px solid #EF008E;
 }
 
-#concerts div.concert-details {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	align-items: center;
+.about__desc-header {
+    margin-bottom: 30px;
+    color: #CCC8FF;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-#concerts div.concert-box {
-	margin-bottom: 20px;
+.about__desc {
+    position: absolute;
+    left: -290px;
+    bottom: -115px;
+    width: 380px;
+    padding: 30px;
+    background-color: #25072e;
+    border-bottom: 3px solid #EF008E;
+}
+.concerts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.concerts__item {
+    flex-basis: 50%;
+    padding: 0 0 45px 55px;
+}
+
+.concerts__image {
+    max-width: 100%;
+    border-bottom: 3px solid #EF008E;
+}
+
+.concerts__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.concerts__info-base {
+    flex-grow: 1;
 }
 
 .concerts__date {
-	text-transform: uppercase;
+    margin: 0;
+    color: #CCC8FF;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3.8px;
 }
 
-.concerts__location  {
-	opacity: 0.5;
+.concerts__location {
+    margin: 0;
+    letter-spacing: 3.8px;
 }
 
-/* zdjecia */
-
-#photos img {
-	width: 250px; 
-	height: 150px;
-	margin-bottom: 20px;
-	border-top: 3px solid #EF008E;
+.embedded-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    display: flex;
+    justify-content: flex-end;
 }
 
-#photos div.box {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
 }
 
-/* linki social*/
-
-#social img {
-	width: 25px;
-	height: 25px;
-
+.gallery__item {
+    flex-basis: 33.3%;
+    padding: 0 0 20px 20px;
 }
 
-#social ul {
-    position: fixed;
-	padding: 0px;
+.gallery__image {
+    max-width: 100%;
+    border-top: 3px solid #EF008E;
 }
 
-/* contact */
-
-#contact img {
-	width: 500px;
-	height: auto;
+.contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-#contact div.box {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.contact__image img {
+    max-width: 100%;
 }
 
-address {
-	font-style: normal;
-	font-size: 13px;
-	color: #CCC8FF;
-	opacity: 0.5;
-	margin-left: 20px;
+.contact__address {
+    padding: 70px;
+    font-style: normal;
 }
 
-form {
-	font-size: 13px;
-	color: #CCC8FF;
-	opacity: 0.5;
-	margin-top: 20px;
+.contact__form {
+    flex-basis: 50%;
+    padding-top: 40px;
 }
 
-input {
-	background-color: #1e1029;
-	border: 0px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	height: 30px;
-    width: 300px;
-
+.contact__form .button {
+    margin-top: 20px;
 }
