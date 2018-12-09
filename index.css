@@ -3,9 +3,11 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
     
-	background-image: url('./images/background.svg');
-	background-size: cover;
+    background-image: url('./images/background.svg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -21,6 +23,7 @@ ul {
     padding: 0;
 }
 
+
 .screen-reader-only {
     position: absolute;
     left: -10000px;
@@ -29,6 +32,12 @@ ul {
     height: 1px;
     overflow: hidden;
 }
+
+/* 
+######################################
+TYPOGRAFIA
+######################################
+*/
 
 body {
     color: rgba(204, 200, 255, 0.8);
@@ -41,6 +50,13 @@ a {
     color: #EF008E;
     text-decoration: none;
 }
+
+/* 
+######################################
+PRZYCISKI
+######################################
+*/
+
 .button {
     padding: 7px 15px;
     border-radius: 3px;
@@ -54,6 +70,40 @@ a {
     letter-spacing: 1.6px;
     cursor: pointer;
 }
+/* animacja
+*/
+.button:hover {
+    background-color: rgba(204, 200, 255, 0.2);
+    color: rgba(204, 200, 255, 1);
+}
+
+.button:active {
+    background-color: rgba(204, 200, 255, 0.2);
+    color: rgba(204, 200, 255, 1);
+}
+
+.button:visited {
+    background-color: rgba(204, 200, 255, 0.1);
+    color: rgba(204, 200, 255, 0.5);
+}
+
+.button:focus {
+    background-color: rgba(204, 200, 255, 0.2);
+    color: rgba(204, 200, 255, 1);
+    border-color: rgba(204, 200, 255, 0.8);
+    outline: none;
+}
+
+.button:disabled {
+    background-color: rgba(204, 200, 255, 0.1);
+    color: rgba(204, 200, 255, 0.5);
+}
+
+/* 
+######################################
+FORMULARZE
+######################################
+*/
 
 .form__field {
     margin-bottom: 10px;
@@ -73,6 +123,19 @@ a {
     border-radius: 4px;
     background-color: rgba(219, 216, 251, 0.1);
 }
+
+@media screen and ( max-width: 1024px ) {
+    .form__input {
+        width: 100%;
+    }
+}
+
+/* 
+######################################
+GŁÓWNY LAYOUT STRONY
+######################################
+*/
+
 .page-header {
     position: fixed;
     top: 50px;
@@ -84,20 +147,52 @@ a {
     bottom: 50px;
     left: 50px;
 }
+
 .page-content {
     margin-left: 220px;
     padding: 0 10%;
 }
-.page-navigation__items {
-    padding-top: 15px;
+
+@media screen and ( max-width: 1280px ) {
+    .page-header {
+        position: static;
+        padding: 30px 0;
+        text-align: center;
+    }
+    .page-content {
+        margin-left: 0;
+    }
+
+    .page-footer {
+        position: static;
+    }
 }
 
-.page-navitagion__item a {
-    color: rgba(239, 0, 142, 0.6);
-	line-height: 30px;
-    text-transform: uppercase;
-    letter-spacing: 6.7px;
+/* 
+######################################
+NAWIGACJA
+######################################
+*/
+
+.page-navigation__items:visited {
+    color: rgb(236, 0, 140, 0.4); 
 }
+
+.page-navigation__items:hover, .page-navigation__items:focus {
+    color: rgb(236, 0, 140, 1); 
+}
+
+.page-navigation__items:active {
+    color: rgb(236, 0, 140, 1); 
+    letter-spacing: 6.5px;
+}
+}
+/* 
+######################################
+LINKI DO SOCIAL MEDIA
+######################################
+*/
+
 .social-links__item + .social-links__item {
     margin-top: 15px;
 }
@@ -106,66 +201,168 @@ a {
     width: 20px;
     height: 20px;
 }
+
+@media screen and ( max-width: 1280px ) {
+    .social-links {
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .social-links__item {
+        display: inline-block;
+    }
+
+    .social-links__item + .social-links__item {
+        margin-top: 0;
+        margin-left: 15px;
+    }
+}
+.social-links__item a {
+    opacity: 0.8;
+    transition: all 0.1s ease-in-out;
+}
+
+.social-links__item a:hover {
+    opacity: 1;
+}
+
+.social-links__item a:active {
+    opacity: 1;
+}
+
+.social-links__item a:visited {
+    opacity: 0.6;
+}
+
+.social-links__item a:focus {
+    opacity: 1;
+    outline: none;
+}
+
+.social-links__item a:disabled {
+    opacity: 0.4;
+}
+/* 
+######################################
+STYLE WSPÓLNE DLA WSZYSTKICH SEKCJI
+######################################
+*/
+
+
 .content-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-	min-height: 100vh;
-	max-width: 100vh;
+    min-height: 100vh;
+}
+
+@media screen and ( max-width: 1024px ) {
+    .content-section {
+        min-height: 0;
+        padding-bottom: 100px;
+    }
 }
 
 .content-section__header {
     margin-bottom: 60px;
     color: #EF008E;
-    font-size: 2vw;
+    font-size: 28px;
     font-weight: bold;
     letter-spacing: 4.5px;
     text-transform: uppercase;
 }
 
 .content-section__body {
-    min-height: 100vh;
-    height: auto;
-    margin-left: 300px;
-	padding: 0 10%;
+    flex-grow: 1;
 }
+
+/* 
+######################################
+SEKCJA "HOME"
+######################################
+*/
 
 .content-section.home-section {
     align-items: center;
 }
-@media (max-width: 1024px) { 
-    .content-section {
-        min-height: initial;
-        margin: 0 20px 0 20px;
-    }
-}
 
 .band-members {
-position: relative;
-display: flex;
-flex-direction: row;
-
-min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 375px;
 }
 
+.band-members__name,
+.band-members__desc {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
 
 .band-members__name {
+    color: #ccc8ff;
+    font-size: 15px;
+    letter-spacing: 3.8px;
+    font-weight: bold;
     text-transform: uppercase;
-    font-family: "helvetica", bold;
-    color: #dbd8fb
-    letter-spacing: 40px;
 }
 
 .band-members__desc {
-	margin: 40px 0 0 50px;
-    opacity: 0.1;
-    
+    font-size: 13px;
+    letter-spacing: 3.5px;
+    font-weight: normal;
 }
-@media screen and (max-width: 800px) {
-	.page-wrapper {
-	  flex-direction: column;
-	}
+
+.band-members__item img {
+    width: 100%;
+    opacity: .55;
+}
+
+/* animacja */
+
+.band-members__item:hover > .band-members__name {
+    opacity: 1;
+}
+
+.band-members__item:hover > .band-members__desc {
+    opacity: 1;
+}
+
+.band-members__item:hover > .band-members__image {
+    opacity: 1;
+}
+
+@media screen and ( min-width: 1025px ) and ( max-width: 1280px ) {
+    .content-section.home-section {
+        justify-content: flex-start;
+        padding-top: 20vh;
+    }
+}
+
+@media screen and ( max-width: 1024px ) {
+    .band-members {
+        flex-direction: column;
+    }
+
+    .band-members__image {
+        margin: 50px 0 10px;
+    }
+
+    .band-members__name,
+    .band-members__desc {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* 
+######################################
+SEKCJA "ABOUT"
+######################################
+*/
+
+
 .about {
     position: relative;
     margin-left: 290px;
@@ -194,6 +391,25 @@ min-height: 100vh;
     background-color: #25072e;
     border-bottom: 3px solid #EF008E;
 }
+
+@media screen and ( max-width: 1024px ) {
+    .about {
+        margin: 0;
+    }
+
+    .about__desc {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* 
+######################################
+SEKCJA "CONCERTS"
+######################################
+*/
+
 .concerts {
     display: flex;
     flex-direction: row;
@@ -236,14 +452,38 @@ min-height: 100vh;
     letter-spacing: 3.8px;
 }
 
-.embedded-video {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    display: flex;
-    justify-content: flex-end;
+@media screen and ( max-width: 1024px ) {
+    .concerts {
+        display: block;
+        width: auto;
+    }
+
+    .concerts__item {
+        padding-left: 0;
+    }
 }
 
+/* 
+######################################
+SEKCJA "VIDEO"
+######################################
+*/
+
+.embedded-video {
+    border-top: 3px solid #EF008E;
+}
+
+@media screen and ( max-width: 1024px ) {
+    .embedded-video {
+        max-width: 100%;
+    }
+}
+
+/* 
+######################################
+SEKCJA "PHOTOS"
+######################################
+*/
 
 .gallery {
     display: flex;
@@ -261,6 +501,27 @@ min-height: 100vh;
     max-width: 100%;
     border-top: 3px solid #EF008E;
 }
+
+@media screen and ( max-width: 1024px ) {
+    .gallery {
+        display: block;
+        width: auto;
+    }
+
+    .gallery__item {
+        padding-left: 0;
+    }
+}
+
+.gallery__item:hover {
+    transform: scale(1.075);
+}
+
+/* 
+######################################
+SEKCJA "CONTACT"
+######################################
+*/
 
 .contact {
     display: flex;
@@ -285,4 +546,18 @@ min-height: 100vh;
 
 .contact__form .button {
     margin-top: 20px;
+}
+
+@media screen and ( max-width: 1024px ) {
+    .contact {
+        display: block;
+    }
+
+    .contact__address {
+        padding: 30px 0 0;
+    }
+
+    .contact__form {
+        padding-top: 30px;
+    }
 }
